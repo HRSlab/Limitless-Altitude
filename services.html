@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Limitless Altitude - Services Wireframe (Blueprint)</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            border: 1px solid #ccc; /* Optional: adds a border around the whole page like a blueprint sheet */
+        }
+        /* Wireframe specific styles */
+        .wireframe-section {
+            border-bottom: 1px dashed #999;
+            padding-top: 3rem; /* Equivalent to py-12, adjusted for non-hero sections */
+            padding-bottom: 3rem; /* Equivalent to py-12 */
+        }
+        .wireframe-section:last-child {
+            border-bottom: none;
+        }
+        .wireframe-button {
+            border: 1px solid #333;
+            background-color: #f0f0f0;
+            color: #333;
+            padding: 0.5rem 1rem; /* py-2 px-4 */
+            text-align: center;
+            font-weight: 600; /* semibold */
+            display: inline-block;
+        }
+        .wireframe-button:hover {
+            background-color: #333;
+            color: #f0f0f0;
+        }
+        .wireframe-button-primary {
+            background-color: #333;
+            color: #fafafa !important;
+            border: 1px solid #333;
+            display: inline-block;
+        }
+        .wireframe-button-primary:hover {
+            background-color: #555;
+            border-color: #555;
+        }
+        .placeholder-box {
+            border: 2px dashed #999;
+            background-color: #f7f7f7;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #777;
+            font-size: 0.875rem; /* text-sm */
+        }
+        .page-title-section {
+            background-color: #e9e9e9; /* Light gray for page title background */
+            padding-top: 2.5rem; /* py-10 */
+            padding-bottom: 2.5rem; /* py-10 */
+            border-bottom: 1px solid #bbb;
+        }
+        .service-card {
+            border: 1px solid #bbb;
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+<body class="bg-white text-black">
+
+    <header class="bg-gray-100 text-black border-b border-gray-400 sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <a href="index.html" class="text-xl font-bold text-black hover:text-gray-700 transition-colors">
+                [LOGO] Limitless Altitude
+            </a>
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-black focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
+            <nav class="hidden md:flex space-x-4 items-center">
+                <a href="index.html" class="text-gray-700 hover:text-black transition-colors font-medium">Home</a>
+                <a href="about.html" class="text-gray-700 hover:text-black transition-colors font-medium">About Us</a>
+                <a href="services.html" class="text-black transition-colors font-medium border-b-2 border-black">Services</a>
+                <a href="insights.html" class="text-gray-700 hover:text-black transition-colors font-medium">Insights</a>
+                <a href="contact.html" class="wireframe-button-primary px-3 py-1.5 text-sm">Contact Us</a>
+            </nav>
+        </div>
+        <div id="mobile-menu" class="md:hidden hidden bg-gray-200 border-t border-gray-300">
+            <a href="index.html" class="block px-6 py-2.5 text-gray-700 hover:bg-gray-300 transition-colors">Home</a>
+            <a href="about.html" class="block px-6 py-2.5 text-gray-700 hover:bg-gray-300 transition-colors">About Us</a>
+            <a href="services.html" class="block px-6 py-2.5 text-black bg-gray-300 transition-colors">Services</a>
+            <a href="insights.html" class="block px-6 py-2.5 text-gray-700 hover:bg-gray-300 transition-colors">Insights</a>
+            <a href="contact.html" class="block px-6 py-2.5 wireframe-button-primary text-center mt-2 mb-3 mx-4 text-sm">Contact Us</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-title-section">
+            <div class="container mx-auto px-6 text-center">
+                <h1 class="text-3xl md:text-4xl font-bold text-black">Our Services</h1>
+                <p class="text-gray-700 mt-2 max-w-xl mx-auto">
+                    Discover how Limitless Altitude can help your organization thrive through our specialized consulting services.
+                </p>
+            </div>
+        </section>
+
+        <section class="wireframe-section bg-white">
+            <div class="container mx-auto px-6">
+                <h2 class="text-2xl font-semibold text-black text-center mb-10">Explore Our Expertise</h2>
+                <div class="grid md:grid-cols-2 gap-8">
+
+                    <div class="service-card p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="placeholder-box w-12 h-12 mr-4"><span>Icon</span></div>
+                            <h3 class="text-xl font-semibold text-black">Leadership Development</h3>
+                        </div>
+                        <p class="text-gray-700 text-sm mb-2">
+                            <strong>What it is:</strong> Programs and frameworks designed to cultivate strong, adaptable leaders.
+                        </p>
+                        <p class="text-gray-700 text-sm mb-2">
+                            <strong>Who it's for:</strong> Aspiring leaders, current managers, and executive teams.
+                        </p>
+                        <p class="text-gray-700 text-sm mb-4">
+                            <strong>Key Benefits:</strong> Enhanced decision-making, improved team performance, strategic thinking.
+                        </p>
+                        <a href="service-leadership-development.html" class="wireframe-button text-sm">Learn More &rarr;</a>
+                    </div>
+
+                    <div class="service-card p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="placeholder-box w-12 h-12 mr-4"><span>Icon</span></div>
+                            <h3 class="text-xl font-semibold text-black">Organizational Excellence</h3>
+                        </div>
+                        <p class="text-gray-700 text-sm mb-2">
+                            <strong>What it is:</strong> Consulting on processes, efficiency, and troubleshooting organizational challenges.
+                        </p>
+                        <p class="text-gray-700 text-sm mb-2">
+                            <strong>Who it's for:</strong> Businesses seeking to optimize operations and improve effectiveness.
+                        </p>
+                        <p class="text-gray-700 text-sm mb-4">
+                            <strong>Key Benefits:</strong> Streamlined workflows, increased productivity, better resource allocation.
+                        </p>
+                        <a href="service-organizational-excellence.html" class="wireframe-button text-sm">Learn More &rarr;</a>
+                    </div>
+
+                    <div class="service-card p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="placeholder-box w-12 h-12 mr-4"><span>Icon</span></div>
+                            <h3 class="text-xl font-semibold text-black">Multigenerational Collaboration</h3>
+                        </div>
+                        <p class="text-gray-700 text-sm mb-2">
+                            <strong>What it is:</strong> Strategies for bridging generational gaps and fostering synergy in the workplace.
+                        </p>
+                        <p class="text-gray-700 text-sm mb-2">
+                            <strong>Who it's for:</strong> Organizations with diverse age groups aiming for better teamwork.
+                        </p>
+                        <p class="text-gray-700 text-sm mb-4">
+                            <strong>Key Benefits:</strong> Improved communication, knowledge sharing, inclusive leadership.
+                        </p>
+                        <a href="service-multigenerational-collaboration.html" class="wireframe-button text-sm">Learn More &rarr;</a>
+                    </div>
+
+                    <div class="service-card p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="placeholder-box w-12 h-12 mr-4"><span>Icon</span></div>
+                            <h3 class="text-xl font-semibold text-black">Sustainable Work-Life Integration</h3>
+                        </div>
+                        <p class="text-gray-700 text-sm mb-2">
+                            <strong>What it is:</strong> Approaches for promoting balance, well-being, and sustainable success.
+                        </p>
+                        <p class="text-gray-700 text-sm mb-2">
+                            <strong>Who it's for:</strong> Leaders and organizations committed to employee well-being and long-term performance.
+                        </p>
+                        <p class="text-gray-700 text-sm mb-4">
+                            <strong>Key Benefits:</strong> Reduced burnout, increased engagement, healthier work culture.
+                        </p>
+                        <a href="service-work-life-integration.html" class="wireframe-button text-sm">Learn More &rarr;</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="wireframe-section bg-gray-50">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-2xl font-semibold text-black mb-4">Ready to Elevate Your Organization?</h2>
+                <p class="text-gray-700 mb-6 max-w-lg mx-auto">
+                    Let's discuss how our tailored solutions can address your specific challenges and goals.
+                </p>
+                <a href="contact.html" class="wireframe-button-primary px-6 py-2.5 text-md">
+                    Contact Us for a Consultation
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-gray-800 text-gray-300 py-10 border-t-4 border-black">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-3 gap-6 mb-6">
+                <div>
+                    <h4 class="text-md font-semibold text-white mb-2">Limitless Altitude</h4>
+                    <p class="text-xs">
+                        Consulting firm specializing in leadership development, organizational psychology, and strategic growth.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-md font-semibold text-white mb-2">Quick Links</h4>
+                    <ul class="space-y-1.5 text-xs">
+                        <li><a href="index.html" class="hover:text-white transition-colors">Home</a></li>
+                        <li><a href="about.html" class="hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="services.html" class="hover:text-white transition-colors">Services</a></li>
+                        <li><a href="insights.html" class="hover:text-white transition-colors">Insights</a></li>
+                        <li><a href="contact.html" class="hover:text-white transition-colors">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-md font-semibold text-white mb-2">Legal</h4>
+                     <ul class="space-y-1.5 text-xs">
+                        <li><a href="#privacy" class="hover:text-white transition-colors">Privacy Policy</a></li>
+                        <li><a href="#terms" class="hover:text-white transition-colors">Terms of Service</a></li>
+                    </ul>
+                    <div class="mt-3">
+                        <p class="text-xs">Follow Us: [Social Icons Placeholder]</p>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 pt-6 text-center text-xs">
+                <p>&copy; <span id="currentYear"></span> Limitless Altitude. All Rights Reserved. (Wireframe)</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        if (mobileMenuButton && mobileMenu) {
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
+
+        // Set current year in footer
+        const currentYearSpan = document.getElementById('currentYear');
+        if (currentYearSpan) {
+            currentYearSpan.textContent = new Date().getFullYear();
+        }
+        
+        // Highlight current page in navigation
+        const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+        const navLinks = document.querySelectorAll('header nav a, #mobile-menu a');
+
+        navLinks.forEach(link => {
+            const linkPage = link.getAttribute('href').split('/').pop();
+            if (linkPage === currentPage) {
+                if(link.closest('#mobile-menu')) {
+                    link.classList.add('text-black', 'bg-gray-300');
+                    link.classList.remove('text-gray-700');
+                } else if (link.closest('header nav')) {
+                    link.classList.add('text-black', 'border-b-2', 'border-black');
+                    link.classList.remove('text-gray-700');
+                }
+            } else {
+                if(link.closest('#mobile-menu')) {
+                    link.classList.add('text-gray-700');
+                    link.classList.remove('text-black', 'bg-gray-300');
+                } else if (link.closest('header nav')) {
+                    link.classList.add('text-gray-700');
+                    link.classList.remove('text-black', 'border-b-2', 'border-black');
+                }
+            }
+        });
+    </script>
+
+</body>
+</html>

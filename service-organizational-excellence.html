@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Limitless Altitude - Organizational Excellence (Vue Nav)</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            border: 1px solid #ccc;
+        }
+        .wireframe-section {
+            border-bottom: 1px dashed #999;
+            padding-top: 3rem;
+            padding-bottom: 3rem;
+        }
+        .wireframe-section:last-child {
+            border-bottom: none;
+        }
+        .wireframe-button {
+            border: 1px solid #333;
+            background-color: #f0f0f0;
+            color: #333;
+            padding: 0.5rem 1rem;
+            text-align: center;
+            font-weight: 600;
+            display: inline-block;
+        }
+        .wireframe-button:hover {
+            background-color: #333;
+            color: #f0f0f0;
+        }
+        .wireframe-button-primary {
+            background-color: #333;
+            color: #fff !important;
+            border: 1px solid #333;
+            display: inline-block;
+        }
+        .wireframe-button-primary:hover {
+            background-color: #555;
+            border-color: #555;
+        }
+        .placeholder-box {
+            border: 2px dashed #999;
+            background-color: #f7f7f7;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #777;
+            font-size: 0.875rem;
+        }
+        .page-title-section {
+            background-color: #e9e9e9;
+            padding-top: 2.5rem;
+            padding-bottom: 2.5rem;
+            border-bottom: 1px solid #bbb;
+        }
+        .content-section h3 {
+            font-size: 1.25rem; /* text-xl */
+            font-weight: 600; /* semibold */
+            color: #000;
+            margin-bottom: 0.75rem; /* mb-3 */
+        }
+        .content-section p, .content-section ul {
+            font-size: 0.875rem; /* text-sm */
+            color: #4a5568; /* gray-700 */
+            margin-bottom: 1rem; /* mb-4 */
+        }
+        .content-section ul {
+            list-style-type: disc;
+            padding-left: 1.5rem;
+        }
+        /* Active link styles (to be applied by Vue) */
+        .nav-link-active-desktop {
+            color: #000 !important;
+            border-bottom: 2px solid #000;
+        }
+        .nav-link-active-mobile {
+            color: #000 !important;
+            background-color: #d1d5db; /* gray-300 */
+        }
+    </style>
+</head>
+<body class="bg-white text-black">
+
+    <div id="app">
+        <header-navigation :current-page="currentPage"></header-navigation>
+
+        <main>
+            <section class="page-title-section">
+                <div class="container mx-auto px-6">
+                    <nav class="text-xs text-gray-600 mb-2" aria-label="Breadcrumb">
+                        <ol class="list-none p-0 inline-flex">
+                          <li class="flex items-center">
+                            <a href="index.html" class="hover:text-black">[Home]</a>
+                            <span class="mx-2">/</span>
+                          </li>
+                          <li class="flex items-center">
+                            <a href="services.html" class="hover:text-black">[Services]</a>
+                            <span class="mx-2">/</span>
+                          </li>
+                          <li class="text-gray-800" aria-current="page">
+                            [Organizational Excellence]
+                          </li>
+                        </ol>
+                      </nav>
+                    <h1 class="text-3xl md:text-4xl font-bold text-black">Service: Organizational Excellence</h1>
+                    <p class="text-gray-700 mt-2 max-w-xl">
+                        Optimizing processes, enhancing efficiency, and troubleshooting challenges for peak performance.
+                    </p>
+                </div>
+            </section>
+
+            <section class="wireframe-section bg-white">
+                <div class="container mx-auto px-6 md:flex md:space-x-12">
+                    <div class="md:w-2/3 content-section">
+                        <h2 class="text-2xl font-semibold text-black mb-6">Optimizing Your Operations</h2>
+                        <p>
+                            Detailed explanation of what Organizational Excellence / Operational Expertise entails at Limitless Altitude. This section would cover how we help businesses streamline workflows, improve productivity, and address operational bottlenecks. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        </p>
+
+                        <h3>Target Outcomes</h3>
+                        <ul>
+                            <li>[Streamlined and more efficient business processes.]</li>
+                            <li>[Increased productivity and resource utilization.]</li>
+                            <li>[Effective troubleshooting of operational challenges.]</li>
+                            <li>[Enhanced quality control and output consistency.]</li>
+                            <li>[Improved ability to adapt to market changes and scale operations.]</li>
+                        </ul>
+
+                        <h3>Our Consulting Areas & Tools</h3>
+                        <p>
+                            This section would list or describe specific consulting areas like process mapping, workflow analysis, performance metric development, change management, technology integration advice, etc. Tools might include Six Sigma principles, Lean methodologies, etc.
+                        </p>
+                        <div class="placeholder-box w-full h-40 mb-6"><span>Placeholder for diagram/list of methodologies</span></div>
+
+
+                        <h3>Who Is This For?</h3>
+                        <ul>
+                            <li>[Businesses experiencing inefficiencies or operational roadblocks.]</li>
+                            <li>[Organizations undergoing growth or restructuring.]</li>
+                            <li>[Companies looking to improve quality and reduce waste.]</li>
+                            <li>[Teams aiming to enhance their problem-solving capabilities.]</li>
+                        </ul>
+
+                        <h3>Key Benefits for Your Organization</h3>
+                        <ul>
+                            <li>[Reduced operational costs and increased profitability.]</li>
+                            <li>[Improved customer satisfaction through better service delivery.]</li>
+                            <li>[Greater agility in responding to business demands.]</li>
+                            <li>[A culture of continuous improvement and operational awareness.]</li>
+                        </ul>
+
+                        <h3>Our Typical Engagement Process</h3>
+                        <p>
+                            Outline of the typical engagement process for organizational excellence services. This might include:
+                        </p>
+                        <ol class="list-decimal pl-6 text-sm text-gray-700 space-y-1">
+                            <li>[Discovery & Operational Audit]</li>
+                            <li>[Process Analysis & Bottleneck Identification]</li>
+                            <li>[Solution Design & Implementation Planning]</li>
+                            <li>[Execution Support & Change Management]</li>
+                            <li>[Performance Monitoring & Optimization]</li>
+                        </ol>
+                        <div class="placeholder-box w-full h-32 mt-4 mb-6"><span>Placeholder for process improvement cycle graphic</span></div>
+
+                    </div>
+
+                    <aside class="md:w-1/3 mt-10 md:mt-0">
+                        <div class="p-6 border border-gray-300 bg-gray-50">
+                            <h3 class="text-xl font-semibold text-black mb-4">Enhance Your Operations?</h3>
+                            <p class="text-sm text-gray-700 mb-4">
+                                Let's identify opportunities to streamline your processes and boost efficiency.
+                            </p>
+                            <a href="contact.html?service=organizational_excellence" class="wireframe-button-primary w-full text-center py-2.5 text-md">
+                                Request a Consultation
+                            </a>
+                            <hr class="my-6 border-gray-300">
+                            <h4 class="text-lg font-semibold text-black mb-3">Other Services</h4>
+                            <ul class="text-sm space-y-1">
+                                <li><a href="service-leadership-development.html" class="text-blue-600 hover:underline">[Leadership Development]</a></li>
+                                <li><a href="service-multigenerational-collaboration.html" class="text-blue-600 hover:underline">[Multigenerational Collaboration]</a></li>
+                                <li><a href="service-work-life-integration.html" class="text-blue-600 hover:underline">[Sustainable Work-Life Integration]</a></li>
+                            </ul>
+                        </div>
+                    </aside>
+                </div>
+            </section>
+
+             <section class="wireframe-section bg-gray-50">
+                <div class="container mx-auto px-6 text-center">
+                    <h2 class="text-2xl font-semibold text-black mb-4">Explore Further or Get in Touch</h2>
+                    <p class="text-gray-700 mb-6 max-w-lg mx-auto">
+                        Learn more about our comprehensive approach or contact us directly for a consultation.
+                    </p>
+                    <div class="space-x-0 md:space-x-4 space-y-3 md:space-y-0">
+                        <a href="services.html" class="wireframe-button px-6 py-2.5 text-md">
+                            Back to All Services
+                        </a>
+                        <a href="contact.html" class="wireframe-button-primary px-6 py-2.5 text-md">
+                            Contact Us
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <footer class="bg-gray-800 text-gray-300 py-10 border-t-4 border-black">
+            <div class="container mx-auto px-6">
+                <div class="grid md:grid-cols-3 gap-6 mb-6">
+                    <div>
+                        <h4 class="text-md font-semibold text-white mb-2">Limitless Altitude</h4>
+                        <p class="text-xs">
+                            Consulting firm specializing in leadership development, organizational psychology, and strategic growth.
+                        </p>
+                    </div>
+                    <div>
+                        <h4 class="text-md font-semibold text-white mb-2">Quick Links</h4>
+                        <ul class="space-y-1.5 text-xs">
+                            <li><a href="index.html" class="hover:text-white transition-colors">Home</a></li>
+                            <li><a href="about.html" class="hover:text-white transition-colors">About Us</a></li>
+                            <li><a href="services.html" class="hover:text-white transition-colors">Services</a></li>
+                            <li><a href="insights.html" class="hover:text-white transition-colors">Insights</a></li>
+                            <li><a href="contact.html" class="hover:text-white transition-colors">Contact Us</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-md font-semibold text-white mb-2">Legal</h4>
+                         <ul class="space-y-1.5 text-xs">
+                            <li><a href="#privacy" class="hover:text-white transition-colors">Privacy Policy</a></li>
+                            <li><a href="#terms" class="hover:text-white transition-colors">Terms of Service</a></li>
+                        </ul>
+                        <div class="mt-3">
+                            <p class="text-xs">Follow Us: [Social Icons Placeholder]</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="border-t border-gray-700 pt-6 text-center text-xs">
+                    <p>&copy; <span id="currentYear">{{ new Date().getFullYear() }}</span> Limitless Altitude. All Rights Reserved. (Wireframe)</p>
+                </div>
+            </div>
+        </footer>
+    </div> <script>
+        const app = Vue.createApp({
+            data() {
+                return {
+                    currentPage: 'services.html', // Set to parent service page for active nav state
+                };
+            }
+        });
+
+        app.component('header-navigation', {
+            props: ['currentPage'],
+            data() {
+                return {
+                    isMobileMenuOpen: false,
+                    navItems: [
+                        { text: 'Home', href: 'index.html' },
+                        { text: 'About Us', href: 'about.html' },
+                        { text: 'Services', href: 'services.html' },
+                        { text: 'Insights', href: 'insights.html' },
+                    ]
+                };
+            },
+            methods: {
+                toggleMobileMenu() {
+                    this.isMobileMenuOpen = !this.isMobileMenuOpen;
+                },
+                isLinkActive(href) {
+                    return this.currentPage === href;
+                }
+            },
+            template: `
+                <header class="bg-gray-100 text-black border-b border-gray-400 sticky top-0 z-50">
+                    <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+                        <a href="index.html" class="text-xl font-bold text-black hover:text-gray-700 transition-colors">
+                            [LOGO] Limitless Altitude
+                        </a>
+                        <div class="md:hidden">
+                            <button @click="toggleMobileMenu" class="text-black focus:outline-none">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                                </svg>
+                            </button>
+                        </div>
+                        <nav class="hidden md:flex space-x-4 items-center">
+                            <a v-for="item in navItems" :key="item.text" :href="item.href"
+                               class="text-gray-700 hover:text-black transition-colors font-medium"
+                               :class="{ 'nav-link-active-desktop': isLinkActive(item.href) }">
+                                {{ item.text }}
+                            </a>
+                            <a href="contact.html"
+                               class="wireframe-button-primary px-3 py-1.5 text-sm"
+                               :class="{'!bg-gray-500 !border-gray-500': currentPage === 'contact.html'}">
+                                Contact Us
+                            </a>
+                        </nav>
+                    </div>
+                    <div v-show="isMobileMenuOpen" class="md:hidden bg-gray-200 border-t border-gray-300">
+                        <a v-for="item in navItems" :key="item.text" :href="item.href"
+                           class="block px-6 py-2.5 text-gray-700 hover:bg-gray-300 transition-colors"
+                           :class="{ 'nav-link-active-mobile': isLinkActive(item.href) }">
+                            {{ item.text }}
+                        </a>
+                        <a href="contact.html"
+                           class="block px-6 py-2.5 wireframe-button-primary text-center mt-2 mb-3 mx-4 text-sm"
+                           :class="{'!bg-gray-500 !border-gray-500': currentPage === 'contact.html'}">
+                           Contact Us
+                        </a>
+                    </div>
+                </header>
+            `
+        });
+
+        app.mount('#app');
+    </script>
+
+</body>
+</html>

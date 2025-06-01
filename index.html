@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Limitless Altitude - Homepage Wireframe (Vue Nav)</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            border: 1px solid #ccc;
+        }
+        .wireframe-section {
+            border-bottom: 1px dashed #999;
+            padding-top: 4rem;
+            padding-bottom: 4rem;
+        }
+        .wireframe-section:last-child {
+            border-bottom: none;
+        }
+        .wireframe-button {
+            border: 1px solid #333;
+            background-color: #f0f0f0;
+            color: #333;
+            padding: 0.5rem 1rem;
+            text-align: center;
+            font-weight: 600;
+            display: inline-block;
+        }
+        .wireframe-button:hover {
+            background-color: #333;
+            color: #f0f0f0;
+        }
+        .wireframe-button-primary {
+            background-color: #333;
+            color: #fff !important;
+            border: 1px solid #333;
+            display: inline-block;
+        }
+        .wireframe-button-primary:hover {
+            background-color: #555;
+            border-color: #555;
+        }
+        .placeholder-box {
+            border: 2px dashed #999;
+            background-color: #f7f7f7;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #777;
+            font-size: 0.875rem;
+        }
+        /* Active link styles (to be applied by Vue) */
+        .nav-link-active-desktop {
+            color: #000 !important; /* Ensure black text */
+            border-bottom: 2px solid #000;
+        }
+        .nav-link-active-mobile {
+            color: #000 !important; /* Ensure black text */
+            background-color: #d1d5db; /* gray-300 */
+        }
+    </style>
+</head>
+<body class="bg-white text-black">
+
+    <div id="app">
+        <header-navigation :current-page="currentPage"></header-navigation>
+    </div>
+
+    <main>
+        <section class="wireframe-section bg-gray-50">
+            <div class="container mx-auto px-6 text-center">
+                <div class="placeholder-box w-full h-48 md:h-64 mb-8">
+                    <span>Hero Background Image / Graphic Placeholder</span>
+                </div>
+                <h1 class="text-3xl md:text-5xl font-bold text-black mb-4">
+                    Headline: Elevating Leadership, Optimizing Success
+                </h1>
+                <p class="text-md md:text-lg text-gray-700 mb-8 max-w-2xl mx-auto">
+                    Brief introduction to the firm and its focus areas. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </p>
+                <div class="space-y-3 md:space-y-0 md:space-x-3">
+                    <a href="services.html" class="wireframe-button-primary inline-block px-6 py-2.5 text-md">
+                        CTA: Explore Our Services
+                    </a>
+                    <a href="contact.html" class="wireframe-button inline-block px-6 py-2.5 text-md">
+                        CTA: Contact Us
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="wireframe-section bg-white">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-2xl font-semibold text-black mb-3">Section: Welcome / Intro</h2>
+                <p class="text-gray-600 mb-6 max-w-xl mx-auto">
+                    Brief firm introduction. We partner with you to unlock potential, enhance performance, and drive meaningful results.
+                </p>
+            </div>
+        </section>
+
+        <section class="wireframe-section bg-gray-50">
+            <div class="container mx-auto px-6">
+                <h2 class="text-2xl font-semibold text-black text-center mb-10">Section: Core Service Areas</h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="bg-white p-5 border border-gray-300 text-center">
+                        <div class="placeholder-box w-16 h-16 mx-auto mb-3"><span>Icon</span></div>
+                        <h3 class="text-lg font-semibold text-black mb-1.5">Leadership Excellence</h3>
+                        <p class="text-gray-600 text-xs mb-3">Short description of service. Cultivating strong leaders.</p>
+                        <a href="service-leadership-development.html" class="text-blue-600 font-medium hover:underline text-sm">Learn More &rarr;</a>
+                    </div>
+                    <div class="bg-white p-5 border border-gray-300 text-center">
+                         <div class="placeholder-box w-16 h-16 mx-auto mb-3"><span>Icon</span></div>
+                        <h3 class="text-lg font-semibold text-black mb-1.5">Operational Expertise</h3>
+                        <p class="text-gray-600 text-xs mb-3">Short description of service. Optimizing processes.</p>
+                        <a href="service-organizational-excellence.html" class="text-blue-600 font-medium hover:underline text-sm">Learn More &rarr;</a>
+                    </div>
+                    <div class="bg-white p-5 border border-gray-300 text-center">
+                        <div class="placeholder-box w-16 h-16 mx-auto mb-3"><span>Icon</span></div>
+                        <h3 class="text-lg font-semibold text-black mb-1.5">Multigenerational Collaboration</h3>
+                        <p class="text-gray-600 text-xs mb-3">Short description of service. Bridging generational gaps.</p>
+                        <a href="service-multigenerational-collaboration.html" class="text-blue-600 font-medium hover:underline text-sm">Learn More &rarr;</a>
+                    </div>
+                    <div class="bg-white p-5 border border-gray-300 text-center">
+                        <div class="placeholder-box w-16 h-16 mx-auto mb-3"><span>Icon</span></div>
+                        <h3 class="text-lg font-semibold text-black mb-1.5">Sustainable Work-Life Integration</h3>
+                        <p class="text-gray-600 text-xs mb-3">Short description of service. Promoting balance.</p>
+                        <a href="service-work-life-integration.html" class="text-blue-600 font-medium hover:underline text-sm">Learn More &rarr;</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="wireframe-section bg-white">
+            <div class="container mx-auto px-6">
+                <h2 class="text-2xl font-semibold text-black text-center mb-10">Section: Trust Signals</h2>
+                <div class="text-center text-gray-700">
+                    <p class="italic mb-6">"Testimonial placeholder..." - Client Name, Company</p>
+                    <div class="flex justify-center items-center space-x-6">
+                        <div class="placeholder-box w-28 h-14"><span>Client Logo</span></div>
+                        <div class="placeholder-box w-28 h-14"><span>Client Logo</span></div>
+                        <div class="placeholder-box w-28 h-14"><span>Client Logo</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="wireframe-section bg-gray-100">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-2xl font-semibold text-black mb-4">Section: Insights / Blog Link</h2>
+                <p class="text-gray-700 mb-6 max-w-xl mx-auto">
+                    Brief text encouraging users to visit insights. Explore articles, white papers, and resources.
+                </p>
+                <a href="insights.html" class="wireframe-button-primary inline-block px-6 py-2.5 text-md">
+                    CTA: Visit Insights Hub
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-gray-300 py-10 border-t-4 border-black">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-3 gap-6 mb-6">
+                <div>
+                    <h4 class="text-md font-semibold text-white mb-2">Limitless Altitude</h4>
+                    <p class="text-xs">
+                        Consulting firm specializing in leadership development, organizational psychology, and strategic growth.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-md font-semibold text-white mb-2">Quick Links</h4>
+                    <ul class="space-y-1.5 text-xs">
+                        <li><a href="index.html" class="hover:text-white transition-colors">Home</a></li>
+                        <li><a href="about.html" class="hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="services.html" class="hover:text-white transition-colors">Services</a></li>
+                        <li><a href="insights.html" class="hover:text-white transition-colors">Insights</a></li>
+                        <li><a href="contact.html" class="hover:text-white transition-colors">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-md font-semibold text-white mb-2">Legal</h4>
+                     <ul class="space-y-1.5 text-xs">
+                        <li><a href="/privacy.html" class="hover:text-white transition-colors">Privacy Policy</a></li>
+                        <li><a href="terms" class="hover:text-white transition-colors">Terms of Service</a></li>
+                    </ul>
+                    <div class="mt-3">
+                        <p class="text-xs">Follow Us: [Social Icons Placeholder]</p>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 pt-6 text-center text-xs">
+                <p>&copy; <span id="currentYear">{{ new Date().getFullYear() }}</span> Limitless Altitude. All Rights Reserved. (Wireframe)</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const app = Vue.createApp({
+            data() {
+                return {
+                    currentPage: '', // Will be set on mount
+                };
+            },
+            mounted() {
+                // Determine current page based on URL
+                const path = window.location.pathname.split('/').pop();
+                this.currentPage = path === '' || path === 'index.html' ? 'index.html' : path;
+            }
+        });
+
+        app.component('header-navigation', {
+            props: ['currentPage'],
+            data() {
+                return {
+                    isMobileMenuOpen: false,
+                    navItems: [
+                        { text: 'Home', href: 'index.html' },
+                        { text: 'About Us', href: 'about.html' },
+                        { text: 'Services', href: 'services.html' },
+                        { text: 'Insights', href: 'insights.html' },
+                    ]
+                };
+            },
+            methods: {
+                toggleMobileMenu() {
+                    this.isMobileMenuOpen = !this.isMobileMenuOpen;
+                },
+                isLinkActive(href) {
+                    return this.currentPage === href;
+                }
+            },
+            template: `
+                <header class="bg-gray-100 text-black border-b border-gray-400 sticky top-0 z-50">
+                    <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+                        <a href="index.html" class="text-xl font-bold text-black hover:text-gray-700 transition-colors">
+                            [LOGO] Limitless Altitude
+                        </a>
+                        <div class="md:hidden">
+                            <button @click="toggleMobileMenu" class="text-black focus:outline-none">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                                </svg>
+                            </button>
+                        </div>
+                        <nav class="hidden md:flex space-x-4 items-center">
+                            <a v-for="item in navItems" :key="item.text" :href="item.href"
+                               class="text-gray-700 hover:text-black transition-colors font-medium"
+                               :class="{ 'nav-link-active-desktop': isLinkActive(item.href) }">
+                                {{ item.text }}
+                            </a>
+                            <a href="contact.html" class="wireframe-button-primary px-3 py-1.5 text-sm">Contact Us</a>
+                        </nav>
+                    </div>
+                    <div v-show="isMobileMenuOpen" class="md:hidden bg-gray-200 border-t border-gray-300">
+                        <a v-for="item in navItems" :key="item.text" :href="item.href"
+                           class="block px-6 py-2.5 text-gray-700 hover:bg-gray-300 transition-colors"
+                           :class="{ 'nav-link-active-mobile': isLinkActive(item.href) }">
+                            {{ item.text }}
+                        </a>
+                        <a href="contact.html" class="block px-6 py-2.5 wireframe-button-primary text-center mt-2 mb-3 mx-4 text-sm">Contact Us</a>
+                    </div>
+                </header>
+            `
+        });
+
+        app.mount('#app');
+
+        // Simple script for footer year, Vue could also handle this if footer becomes a component
+        const currentYearSpan = document.getElementById('currentYear');
+        if (currentYearSpan) { // Check if element exists (it won't inside Vue template initially)
+             // This will be handled by Vue in the footer if it's part of the Vue app.
+             // For now, if it's outside, this is fine.
+        }
+    </script>
+
+</body>
+</html>
+<!-- This is the end of the HTML document. -->
+<!-- Note: The Vue app is mounted to the #app div, and the header-navigation component is defined within the Vue app. -->

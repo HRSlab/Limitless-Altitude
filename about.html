@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Limitless Altitude - About Us Wireframe (Vue Nav)</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            border: 1px solid #ccc;
+        }
+        .wireframe-section {
+            border-bottom: 1px dashed #999;
+            padding-top: 4rem;
+            padding-bottom: 4rem;
+        }
+        .wireframe-section:last-child {
+            border-bottom: none;
+        }
+        .wireframe-button {
+            border: 1px solid #333;
+            background-color: #f0f0f0;
+            color: #333;
+            padding: 0.5rem 1rem;
+            text-align: center;
+            font-weight: 600;
+            display: inline-block;
+        }
+        .wireframe-button:hover {
+            background-color: #333;
+            color: #f0f0f0;
+        }
+        .wireframe-button-primary {
+            background-color: #333;
+            color: #fff !important;
+            border: 1px solid #333;
+            display: inline-block;
+        }
+        .wireframe-button-primary:hover {
+            background-color: #555;
+            border-color: #555;
+        }
+        .placeholder-box {
+            border: 2px dashed #999;
+            background-color: #f7f7f7;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #777;
+            font-size: 0.875rem;
+        }
+        /* Active link styles (to be applied by Vue) */
+        .nav-link-active-desktop {
+            color: #000 !important; /* Ensure black text */
+            border-bottom: 2px solid #000;
+        }
+        .nav-link-active-mobile {
+            color: #000 !important; /* Ensure black text */
+            background-color: #d1d5db; /* gray-300 */
+        }
+    </style>
+</head>
+<body class="bg-white text-black">
+
+    <div id="app">
+        <header-navigation :current-page="currentPage"></header-navigation>
+
+        <main>
+            <section class="page-title-section">
+                <div class="container mx-auto px-6 text-center">
+                    <h1 class="text-3xl md:text-4xl font-bold text-black">About Us</h1>
+                </div>
+            </section>
+
+            <section class="wireframe-section bg-white">
+                <div class="container mx-auto px-6">
+                    <h2 class="text-2xl font-semibold text-black mb-6 text-center md:text-left">About the Brand</h2>
+                    <div class="md:flex md:space-x-8 items-center">
+                        <div class="md:w-1/2 mb-6 md:mb-0">
+                            <p class="text-gray-700 mb-4">
+                                Limitless Altitude is a consulting firm specializing in leadership development, organizational psychology, and strategic growth. We empower businesses and professionals with multigenerational collaboration, fostering innovation, efficiency, and sustainable success.
+                            </p>
+                            <p class="text-gray-700">
+                                Further details about the brand's unique positioning, history (if relevant), and overall philosophy. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                            </p>
+                        </div>
+                        <div class="md:w-1/2">
+                            <div class="placeholder-box w-full h-64 md:h-80">
+                                <span>Image/Graphic representing the brand or team</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="wireframe-section bg-gray-50">
+                <div class="container mx-auto px-6 text-center">
+                    <h2 class="text-2xl font-semibold text-black mb-6">Our Aim & Vision</h2>
+                    <div class="md:flex md:space-x-8">
+                        <div class="md:w-1/2 mb-6 md:mb-0">
+                            <h3 class="text-xl font-semibold text-black mb-3">Our Aim</h3>
+                            <p class="text-gray-700">
+                                To provide tailored leadership and organizational solutions that drive growth, efficiency, and long-term success. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            </p>
+                        </div>
+                        <div class="md:w-1/2">
+                            <h3 class="text-xl font-semibold text-black mb-3">Our Vision</h3>
+                            <p class="text-gray-700">
+                                To be a leading force in leadership development and organizational excellence, shaping the future of work and innovation. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="wireframe-section bg-white">
+                <div class="container mx-auto px-6">
+                    <h2 class="text-2xl font-semibold text-black text-center mb-10">Our Brand Values</h2>
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <div class="p-4 border border-gray-300">
+                            <div class="placeholder-box w-12 h-12 mb-3"><span>Icon</span></div>
+                            <h3 class="text-lg font-semibold text-black mb-2">Leadership Excellence</h3>
+                            <p class="text-gray-600 text-sm">
+                                We cultivate strong, adaptable leaders by providing expert guidance, proven strategies, and innovative frameworks that drive lasting success.
+                            </p>
+                        </div>
+                        <div class="p-4 border border-gray-300">
+                            <div class="placeholder-box w-12 h-12 mb-3"><span>Icon</span></div>
+                            <h3 class="text-lg font-semibold text-black mb-2">Operational Expertise</h3>
+                            <p class="text-gray-600 text-sm">
+                                We optimize organizational processes and troubleshoot challenges, equipping businesses with the tools to enhance efficiency, effectiveness, and long-term performance.
+                            </p>
+                        </div>
+                        <div class="p-4 border border-gray-300">
+                            <div class="placeholder-box w-12 h-12 mb-3"><span>Icon</span></div>
+                            <h3 class="text-lg font-semibold text-black mb-2">Multigenerational Collaboration</h3>
+                            <p class="text-gray-600 text-sm">
+                                We bridge generational gaps in the workplace, fostering inclusive leadership, knowledge-sharing, and synergy between diverse perspectives.
+                            </p>
+                        </div>
+                        <div class="p-4 border border-gray-300">
+                            <div class="placeholder-box w-12 h-12 mb-3"><span>Icon</span></div>
+                            <h3 class="text-lg font-semibold text-black mb-2">Sustainable Work-Life Integration</h3>
+                            <p class="text-gray-600 text-sm">
+                                We promote balance and well-being by developing strategies that empower leaders and organizations to achieve sustainable success without compromising personal fulfillment.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="wireframe-section bg-gray-50">
+                <div class="container mx-auto px-6">
+                    <h2 class="text-2xl font-semibold text-black mb-6 text-center md:text-left">Our Unique Approach</h2>
+                     <div class="md:flex md:space-x-8 items-center flex-row-reverse">
+                        <div class="md:w-1/2 mb-6 md:mb-0">
+                            <p class="text-gray-700 mb-4">
+                                Description of the unique approach/methodology, emphasizing I/O psychology, strategic, results-oriented focus. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            </p>
+                            <p class="text-gray-700">
+                                More details on how this approach benefits clients and differentiates the firm. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                            </p>
+                        </div>
+                        <div class="md:w-1/2">
+                            <div class="placeholder-box w-full h-64 md:h-80">
+                                <span>Image/Diagram illustrating methodology</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="wireframe-section bg-white">
+                <div class="container mx-auto px-6">
+                    <h2 class="text-2xl font-semibold text-black text-center mb-10">(Optional) Meet Our Team / Founder</h2>
+                    <div class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <div class="text-center p-4 border border-gray-300">
+                            <div class="placeholder-box w-32 h-32 rounded-full mx-auto mb-4"><span>Photo</span></div>
+                            <h3 class="text-lg font-semibold text-black">Founder/Team Member Name</h3>
+                            <p class="text-gray-500 text-sm mb-2">Title/Role</p>
+                            <p class="text-gray-600 text-xs">
+                                Brief bio placeholder. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            </p>
+                        </div>
+                        <div class="text-center p-4 border border-gray-300">
+                            <div class="placeholder-box w-32 h-32 rounded-full mx-auto mb-4"><span>Photo</span></div>
+                            <h3 class="text-lg font-semibold text-black">Team Member Name</h3>
+                            <p class="text-gray-500 text-sm mb-2">Title/Role</p>
+                            <p class="text-gray-600 text-xs">
+                                Brief bio placeholder. Sed do eiusmod tempor incididunt ut labore et dolore.
+                            </p>
+                        </div>
+                        <div class="text-center p-4 border border-gray-300">
+                            <div class="placeholder-box w-32 h-32 rounded-full mx-auto mb-4"><span>Photo</span></div>
+                            <h3 class="text-lg font-semibold text-black">Team Member Name</h3>
+                            <p class="text-gray-500 text-sm mb-2">Title/Role</p>
+                            <p class="text-gray-600 text-xs">
+                                Brief bio placeholder. Ut enim ad minim veniam.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="bg-gray-800 text-gray-300 py-10 border-t-4 border-black">
+            <div class="container mx-auto px-6">
+                <div class="grid md:grid-cols-3 gap-6 mb-6">
+                    <div>
+                        <h4 class="text-md font-semibold text-white mb-2">Limitless Altitude</h4>
+                        <p class="text-xs">
+                            Consulting firm specializing in leadership development, organizational psychology, and strategic growth.
+                        </p>
+                    </div>
+                    <div>
+                        <h4 class="text-md font-semibold text-white mb-2">Quick Links</h4>
+                        <ul class="space-y-1.5 text-xs">
+                            <li><a href="index.html" class="hover:text-white transition-colors">Home</a></li>
+                            <li><a href="about.html" class="hover:text-white transition-colors">About Us</a></li>
+                            <li><a href="services.html" class="hover:text-white transition-colors">Services</a></li>
+                            <li><a href="insights.html" class="hover:text-white transition-colors">Insights</a></li>
+                            <li><a href="contact.html" class="hover:text-white transition-colors">Contact Us</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-md font-semibold text-white mb-2">Legal</h4>
+                         <ul class="space-y-1.5 text-xs">
+                            <li><a href="#privacy" class="hover:text-white transition-colors">Privacy Policy</a></li>
+                            <li><a href="#terms" class="hover:text-white transition-colors">Terms of Service</a></li>
+                        </ul>
+                        <div class="mt-3">
+                            <p class="text-xs">Follow Us: [Social Icons Placeholder]</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="border-t border-gray-700 pt-6 text-center text-xs">
+                    <p>&copy; <span id="currentYear">{{ new Date().getFullYear() }}</span> Limitless Altitude. All Rights Reserved. (Wireframe)</p>
+                </div>
+            </div>
+        </footer>
+    </div> <script>
+        const app = Vue.createApp({
+            data() {
+                return {
+                    currentPage: '', // Will be set on mount
+                };
+            },
+            mounted() {
+                // Determine current page based on URL
+                const path = window.location.pathname.split('/').pop();
+                this.currentPage = path === '' || path === 'index.html' ? 'index.html' : path;
+                 if (this.currentPage === '') { // Handles root path for about.html if served directly
+                    const fullPath = window.location.pathname;
+                    if (fullPath.endsWith('about.html')) this.currentPage = 'about.html';
+                }
+            }
+        });
+
+        app.component('header-navigation', {
+            props: ['currentPage'],
+            data() {
+                return {
+                    isMobileMenuOpen: false,
+                    navItems: [
+                        { text: 'Home', href: 'index.html' },
+                        { text: 'About Us', href: 'about.html' },
+                        { text: 'Services', href: 'services.html' },
+                        { text: 'Insights', href: 'insights.html' },
+                    ]
+                };
+            },
+            methods: {
+                toggleMobileMenu() {
+                    this.isMobileMenuOpen = !this.isMobileMenuOpen;
+                },
+                isLinkActive(href) {
+                    return this.currentPage === href;
+                }
+            },
+            template: `
+                <header class="bg-gray-100 text-black border-b border-gray-400 sticky top-0 z-50">
+                    <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+                        <a href="index.html" class="text-xl font-bold text-black hover:text-gray-700 transition-colors">
+                            [LOGO] Limitless Altitude
+                        </a>
+                        <div class="md:hidden">
+                            <button @click="toggleMobileMenu" class="text-black focus:outline-none">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                                </svg>
+                            </button>
+                        </div>
+                        <nav class="hidden md:flex space-x-4 items-center">
+                            <a v-for="item in navItems" :key="item.text" :href="item.href"
+                               class="text-gray-700 hover:text-black transition-colors font-medium"
+                               :class="{ 'nav-link-active-desktop': isLinkActive(item.href) }">
+                                {{ item.text }}
+                            </a>
+                            <a href="contact.html" class="wireframe-button-primary px-3 py-1.5 text-sm">Contact Us</a>
+                        </nav>
+                    </div>
+                    <div v-show="isMobileMenuOpen" class="md:hidden bg-gray-200 border-t border-gray-300">
+                        <a v-for="item in navItems" :key="item.text" :href="item.href"
+                           class="block px-6 py-2.5 text-gray-700 hover:bg-gray-300 transition-colors"
+                           :class="{ 'nav-link-active-mobile': isLinkActive(item.href) }">
+                            {{ item.text }}
+                        </a>
+                        <a href="contact.html" class="block px-6 py-2.5 wireframe-button-primary text-center mt-2 mb-3 mx-4 text-sm">Contact Us</a>
+                    </div>
+                </header>
+            `
+        });
+
+        app.mount('#app');
+    </script>
+
+</body>
+</html>
