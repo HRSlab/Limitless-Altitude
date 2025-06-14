@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infografica: Analisi del Mercato Esoterico Italiano</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #f0f4f8;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 320px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 400px;
+            }
+        }
+        .stat-card {
+            background-color: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+    </style>
+</head>
+<body class="bg-[#fafafa] text-gray-800">
+
+    <header class="text-center p-8 md:p-12 bg-gradient-to-br from-[#fafafa] to-[#d1d5db]">
+        <h1 class="text-4xl md:text-6xl font-bold text-white mb-2 tracking-tight">Il Mercato Spirituale Italiano</h1>
+        <p class="text-xl md:text-2xl text-[#FFD166]">Un'Analisi Strategica delle Opportunità in Crescita</p>
+    </header>
+
+    <main class="container mx-auto p-4 md:p-8">
+
+        <section id="market-size" class="mb-12">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                <div class="stat-card p-6 rounded-2xl shadow-xl">
+                    <p class="text-5xl font-bold text-[#06D6A0]">178,9</p>
+                    <p class="text-lg font-semibold text-[#073B4C]">Miliardi di USD</p>
+                    <p class="text-sm text-gray-600 mt-1">Valore Mercato Globale Spirituale (2024)</p>
+                </div>
+                <div class="stat-card p-6 rounded-2xl shadow-xl">
+                    <p class="text-5xl font-bold text-[#FF6B6B]">+4,04%</p>
+                    <p class="text-lg font-semibold text-[#073B4C]">CAGR Previsto</p>
+                    <p class="text-sm text-gray-600 mt-1">Crescita Globale Annua (2025-2033)</p>
+                </div>
+                <div class="stat-card p-6 rounded-2xl shadow-xl">
+                    <p class="text-5xl font-bold text-[#118AB2]">34%</p>
+                    <p class="text-lg font-semibold text-[#073B4C]">Quota Europea</p>
+                    <p class="text-sm text-gray-600 mt-1">del Mercato Medicina Alternativa (2023)</p>
+                </div>
+            </div>
+
+            <div class="mt-12 bg-white rounded-2xl shadow-lg p-6 md:p-8">
+                <h2 class="text-2xl md:text-3xl font-bold text-center mb-6 text-[#073B4C]">Proiezioni e Dominanza Geografica</h2>
+                <div class="grid grid-cols-1 lg:grid-cols-5 gap-8 items-center">
+                    <div class="lg:col-span-3">
+                         <h3 class="text-xl font-semibold mb-2 text-[#118AB2]">Crescita del Mercato Globale</h3>
+                         <p class="text-sm text-gray-600 mb-4">Il mercato globale dei prodotti e servizi spirituali è in una fase di robusta espansione. L'analisi mostra una traiettoria di crescita costante, spinta da un crescente interesse dei consumatori verso il benessere olistico e la consapevolezza, indicando un potenziale di mercato significativo e duraturo.</p>
+                        <div class="chart-container">
+                            <canvas id="marketGrowthChart"></canvas>
+                        </div>
+                    </div>
+                    <div class="lg:col-span-2">
+                        <h3 class="text-xl font-semibold mb-2 text-[#118AB2]">Mercato CAM in Europa</h3>
+                        <p class="text-sm text-gray-600 mb-4">L'Europa si conferma un attore dominante nel mercato della Medicina Complementare e Alternativa (CAM), detenendo oltre un terzo della quota globale. Questo evidenzia una forte domanda e accettazione culturale per pratiche e prodotti non convenzionali nel continente.</p>
+                        <div class="chart-container">
+                            <canvas id="europeMarketShareChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="macro-trends" class="mb-12 bg-white rounded-2xl shadow-lg p-6 md:p-8">
+            <h2 class="text-2xl md:text-3xl font-bold text-center mb-8 text-[#073B4C]">Le Grandi Correnti che Plasmano il Mercato</h2>
+             <p class="max-w-3xl mx-auto text-center text-gray-600 mb-10">Quattro macro-tendenze interconnesse stanno alimentando la crescita del mercato spirituale, trasformando il modo in cui i consumatori si approcciano al benessere, all'identità e alla ricerca di significato.</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="text-center p-6 bg-gray-50 rounded-xl border border-gray-200">
+                    <span class="text-5xl">🧘</span>
+                    <h3 class="text-xl font-bold mt-4 mb-2 text-[#06D6A0]">Economia del Benessere</h3>
+                    <p class="text-sm text-gray-600">I consumatori investono sempre più nel benessere personale, che si espande dalla salute fisica a quella mentale e spirituale, integrando pratiche olistiche nello stile di vita quotidiano.</p>
+                </div>
+                <div class="text-center p-6 bg-gray-50 rounded-xl border border-gray-200">
+                    <span class="text-5xl">✨</span>
+                    <h3 class="text-xl font-bold mt-4 mb-2 text-[#FFD166]">Rinascita New Age</h3>
+                    <p class="text-sm text-gray-600">Un rinnovato interesse per spiritualità eclettiche, crescita personale e connessione con il divino interiore, al di fuori delle istituzioni religiose tradizionali.</p>
+                </div>
+                <div class="text-center p-6 bg-gray-50 rounded-xl border border-gray-200">
+                    <span class="text-5xl">🔮</span>
+                    <h3 class="text-xl font-bold mt-4 mb-2 text-[#FF6B6B]">Revival Occultista</h3>
+                    <p class="text-sm text-gray-600">Un crescente fascino per la stregoneria, il paganesimo e l'esoterismo, specialmente tra i giovani, alimentato dai social media come forma di empowerment e identità.</p>
+                </div>
+                <div class="text-center p-6 bg-gray-50 rounded-xl border border-gray-200">
+                    <span class="text-5xl">🕊️</span>
+                    <h3 class="text-xl font-bold mt-4 mb-2 text-[#118AB2]">Spiritualità Post-Pandemia</h3>
+                    <p class="text-sm text-gray-600">L'incertezza globale ha accelerato la ricerca di conforto e significato, spingendo molti verso pratiche spirituali personalizzate per la cura di sé e l'equilibrio interiore.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="consumer-insights" class="mb-12 bg-white rounded-2xl shadow-lg p-6 md:p-8">
+            <h2 class="text-2xl md:text-3xl font-bold text-center mb-8 text-[#073B4C]">Chi è il Consumatore Spirituale Italiano?</h2>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <div>
+                    <h3 class="text-xl font-semibold mb-2 text-center text-[#118AB2]">Le Motivazioni d'Acquisto per Archetipo</h3>
+                    <p class="text-sm text-gray-600 mb-4 text-center">Ogni archetipo di consumatore è spinto da un mix unico di motivazioni. Questo grafico a radar confronta l'importanza relativa di diversi fattori (guarigione, scoperta di sé, estetica, identità, tradizione) per i principali profili di clienti identificati.</p>
+                    <div class="chart-container" style="max-width: 500px;">
+                        <canvas id="personasRadarChart"></canvas>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold mb-2 text-center text-[#118AB2]">Approccio Generazionale alla Spiritualità</h3>
+                    <p class="text-sm text-gray-600 mb-4 text-center">Le diverse generazioni mostrano approcci distinti. La Gen Z è guidata dall'estetica e dai trend social, i Millennials cercano benessere e crescita personale, mentre la Gen X dà priorità alla qualità, alla tradizione e a una ricerca più discreta.</p>
+                    <div class="chart-container" style="max-width: 500px;">
+                        <canvas id="generationalInterestsChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="niche-trends" class="mb-12 bg-white rounded-2xl shadow-lg p-6 md:p-8">
+            <h2 class="text-2xl md:text-3xl font-bold text-center mb-4 text-[#073B4C]">Le Nicchie Emergenti</h2>
+            <p class="max-w-3xl mx-auto text-center text-gray-600 mb-10">Oltre alle macro-tendenze, l'analisi del sentiment dei consumatori rivela specifici interessi di nicchia in rapida crescita. Questi rappresentano opportunità per la specializzazione e l'innovazione di prodotto, rispondendo a una domanda sempre più sofisticata.</p>
+            <div class="relative flex flex-col items-center justify-center min-h-[300px] md:min-h-[250px]">
+                <div class="absolute w-full h-full flex items-center justify-center opacity-30">
+                    <div class="w-px h-full bg-[#118AB2]"></div>
+                    <div class="h-px w-full bg-[#118AB2] absolute"></div>
+                </div>
+                <div class="relative bg-[#073B4C] text-white rounded-full px-6 py-3 shadow-lg z-10">
+                    <h3 class="text-lg font-bold">Interessi Crescenti</h3>
+                </div>
+                <div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 md:translate-x-0 md:left-10 md:top-10 z-10">
+                    <div class="bg-[#FF6B6B] text-white p-4 rounded-lg shadow-md text-center">
+                        <h4 class="font-semibold">Rituali Lunari</h4>
+                        <p class="text-xs">Pratiche con i cicli della luna.</p>
+                    </div>
+                </div>
+                <div class="absolute bottom-0 right-1/2 translate-x-1/2 translate-y-1/2 md:translate-x-0 md:right-10 md:bottom-10 z-10">
+                     <div class="bg-[#FFD166] text-gray-800 p-4 rounded-lg shadow-md text-center">
+                        <h4 class="font-semibold">Shadow Work</h4>
+                        <p class="text-xs">Lavoro interiore sull'inconscio.</p>
+                    </div>
+                </div>
+                <div class="absolute top-1/2 right-0 -translate-y-1/2 translate-x-1/2 md:translate-x-0 md:right-20 md:top-auto md:bottom-1/2 z-10">
+                     <div class="bg-[#06D6A0] text-white p-4 rounded-lg shadow-md text-center">
+                        <h4 class="font-semibold">Astro-Tarot</h4>
+                        <p class="text-xs">Integrazione tra astrologia e tarocchi.</p>
+                    </div>
+                </div>
+                <div class="absolute bottom-1/2 left-0 -translate-y-1/2 -translate-x-1/2 md:translate-x-0 md:left-20 md:bottom-auto md:top-1/2 z-10">
+                     <div class="bg-[#118AB2] text-white p-4 rounded-lg shadow-md text-center">
+                        <h4 class="font-semibold">Cristalli per Animali</h4>
+                        <p class="text-xs">Benessere olistico per animali.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="competitive-landscape" class="bg-white rounded-2xl shadow-lg p-6 md:p-8">
+            <h2 class="text-2xl md:text-3xl font-bold text-center mb-8 text-[#073B4C]">Il Panorama Competitivo Italiano</h2>
+            <p class="max-w-3xl mx-auto text-center text-gray-600 mb-10">Il mercato italiano è un ecosistema variegato, dai grandi retailer ai negozi specializzati. L'analisi rivela che i concorrenti di successo si distinguono per specializzazione, cura editoriale e capacità di costruire una community fidata.</p>
+            <div>
+                <h3 class="text-xl font-semibold mb-2 text-center text-[#118AB2]">Livello di Specializzazione dei Principali Player</h3>
+                <p class="text-sm text-gray-600 mb-4 text-center">Questo grafico confronta alcuni dei principali concorrenti online sulla base del loro livello percepito di specializzazione in due categorie chiave: Cristalli/Minerali e Tarocchi/Oracoli. Un punteggio più alto indica una maggiore focalizzazione dell'offerta.</p>
+                <div class="chart-container" style="max-width: 800px; height: 450px;">
+                    <canvas id="competitorSpecializationChart"></canvas>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="text-center p-6 mt-12 bg-[#073B4C] text-gray-400 text-sm">
+        <p>Infografica basata sul report "Analisi Strategica del Mercato Esoterico Italiano" del Dr. Sofia Rossi.</p>
+        <p>Realizzazione a cura di Canvas Infographics. Giugno 2025.</p>
+    </footer>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+
+        const energeticPalette = {
+            red: '#FF6B6B',
+            yellow: '#FFD166',
+            green: '#BAD455',
+            blue: '#118AB2',
+            darkBlue: '#073B4C',
+            white: '#FFFFFF'
+        };
+
+        const wrapLabel = (str, maxWidth = 16) => { // Added default for maxWidth
+            if (typeof str !== 'string' || str.length <= maxWidth) return str; // Added type check
+            const words = str.split(' ');
+            const lines = [];
+            let currentLine = words[0];
+            for (let i = 1; i < words.length; i++) {
+                if (currentLine.length + words[i].length + 1 < maxWidth) {
+                    currentLine += ' ' + words[i];
+                } else {
+                    lines.push(currentLine);
+                    currentLine = words[i];
+                }
+            }
+            lines.push(currentLine);
+            return lines;
+        };
+
+        const defaultTooltipCallback = {
+            plugins: {
+                legend: {
+                    labels: {
+                        color: energeticPalette.darkBlue
+                    }
+                },
+                tooltip: {
+                    callbacks: {
+                        title: function(tooltipItems) {
+                            // Robust check for tooltipItems and its properties
+                            if (tooltipItems && tooltipItems.length > 0) {
+                                const item = tooltipItems[0];
+                                if (item.chart && item.chart.data && item.chart.data.labels && typeof item.dataIndex !== 'undefined' && item.dataIndex < item.chart.data.labels.length) {
+                                    let label = item.chart.data.labels[item.dataIndex];
+                                    if (Array.isArray(label)) {
+                                      return label.join(' ');
+                                    } else {
+                                      return label;
+                                    }
+                                }
+                            }
+                            return ''; // Return empty string if data is not available
+                        }
+                    }
+                }
+            }
+        };
+        
+        const createMarketGrowthChart = () => {
+            const ctx = document.getElementById('marketGrowthChart').getContext('2d');
+            new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: ['2024', '2025', '2027', '2029', '2031', '2033'],
+                    datasets: [{
+                        label: 'Valore Mercato Globale (Mld USD)',
+                        data: [178.94, 186.17, 201.5, 218.1, 236.0, 255.57],
+                        borderColor: energeticPalette.green,
+                        backgroundColor: 'rgba(6, 214, 160, 0.1)',
+                        fill: true,
+                        tension: 0.4,
+                        pointBackgroundColor: energeticPalette.green,
+                        pointRadius: 5
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                     scales: {
+                        y: {
+                            beginAtZero: false,
+                            ticks: { color: energeticPalette.darkBlue },
+                            grid: { color: 'rgba(7, 59, 76, 0.1)' }
+                        },
+                        x: {
+                            ticks: { color: energeticPalette.darkBlue },
+                            grid: { display: false }
+                        }
+                    },
+                    ...defaultTooltipCallback
+                }
+            });
+        };
+
+        const createEuropeMarketShareChart = () => {
+            const ctx = document.getElementById('europeMarketShareChart').getContext('2d');
+            new Chart(ctx, {
+                type: 'doughnut',
+                data: {
+                    labels: ['Europa', 'Resto del Mondo'],
+                    datasets: [{
+                        label: 'Quota di Mercato CAM',
+                        data: [33.98, 100 - 33.98],
+                        backgroundColor: [energeticPalette.blue, 'rgba(7, 59, 76, 0.2)'],
+                        borderColor: [energeticPalette.blue, 'rgba(7, 59, 76, 0.3)'],
+                        borderWidth: 2,
+                        hoverOffset: 8
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    cutout: '70%',
+                    plugins: {
+                        legend: {
+                            position: 'bottom',
+                            labels: {
+                                color: energeticPalette.darkBlue,
+                                boxWidth: 20
+                            }
+                        },
+                        tooltip: { // Keep other tooltip options if needed, defaultTooltipCallback handles title
+                            callbacks: {
+                                label: function(context) {
+                                    return `${context.label}: ${context.parsed.toFixed(2)}%`;
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+            // Apply the default title callback to this chart too, if not already covered by spread
+            if (createEuropeMarketShareChart.options && createEuropeMarketShareChart.options.plugins && createEuropeMarketShareChart.options.plugins.tooltip) {
+                 Object.assign(createEuropeMarketShareChart.options.plugins.tooltip.callbacks, defaultTooltipCallback.plugins.tooltip.callbacks);
+            } else if (createEuropeMarketShareChart.options) {
+                createEuropeMarketShareChart.options.plugins = createEuropeMarketShareChart.options.plugins || {};
+                createEuropeMarketShareChart.options.plugins.tooltip = defaultTooltipCallback.plugins.tooltip;
+            }
+
+        };
+
+        const createPersonasRadarChart = () => {
+            const ctx = document.getElementById('personasRadarChart').getContext('2d');
+            new Chart(ctx, {
+                type: 'radar',
+                data: {
+                    labels: ['Guarigione', 'Scoperta di Sé', 'Estetica', 'Identità', 'Tradizione'],
+                    datasets: [
+                        {
+                            label: 'Sofia (Cercatrice)',
+                            data: [9, 8, 5, 6, 7],
+                            fill: true,
+                            backgroundColor: 'rgba(255, 107, 107, 0.2)',
+                            borderColor: energeticPalette.red,
+                            pointBackgroundColor: energeticPalette.red,
+                        },
+                        {
+                            label: 'Giulia (Esploratrice)',
+                            data: [4, 6, 9, 8, 3],
+                            fill: true,
+                            backgroundColor: 'rgba(255, 209, 102, 0.2)',
+                            borderColor: energeticPalette.yellow,
+                            pointBackgroundColor: energeticPalette.yellow,
+                        },
+                        {
+                            label: 'Marco (Pragmatico)',
+                            data: [7, 5, 3, 2, 1],
+                            fill: true,
+                            backgroundColor: 'rgba(6, 214, 160, 0.2)',
+                            borderColor: energeticPalette.green,
+                            pointBackgroundColor: energeticPalette.green,
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        r: {
+                            angleLines: { color: 'rgba(7, 59, 76, 0.2)' },
+                            grid: { color: 'rgba(7, 59, 76, 0.2)' },
+                            pointLabels: { font: { size: 12 }, color: energeticPalette.darkBlue },
+                            ticks: {
+                                backdropColor: 'rgba(255,255,255,0.7)',
+                                color: energeticPalette.darkBlue,
+                                stepSize: 2
+                            }
+                        }
+                    },
+                     plugins: { // Ensure legend and tooltip are within plugins
+                        legend: {
+                            position: 'bottom',
+                            labels: {
+                                color: energeticPalette.darkBlue
+                            }
+                        },
+                        tooltip: defaultTooltipCallback.plugins.tooltip // Use the corrected callback
+                    }
+                }
+            });
+        };
+
+        const createGenerationalInterestsChart = () => {
+            const ctx = document.getElementById('generationalInterestsChart').getContext('2d');
+            new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: ['Gen Z', 'Millennials', 'Gen X'],
+                    datasets: [
+                        {
+                            label: 'Estetica e Trend',
+                            data: [60, 30, 10],
+                            backgroundColor: energeticPalette.red,
+                        },
+                        {
+                            label: 'Benessere e Crescita',
+                            data: [30, 55, 45],
+                            backgroundColor: energeticPalette.yellow,
+                        },
+                        {
+                            label: 'Qualità e Tradizione',
+                            data: [10, 15, 45],
+                            backgroundColor: energeticPalette.blue,
+                        }
+                    ]
+                },
+                options: {
+                    indexAxis: 'y',
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        x: {
+                            stacked: true,
+                            ticks: { color: energeticPalette.darkBlue, callback: (value) => value + '%' },
+                            grid: { color: 'rgba(7, 59, 76, 0.1)' }
+                        },
+                        y: {
+                            stacked: true,
+                            ticks: { color: energeticPalette.darkBlue },
+                            grid: { display: false }
+                        }
+                    },
+                    plugins: {
+                        legend: {
+                            position: 'bottom',
+                            labels: {
+                                color: energeticPalette.darkBlue
+                            }
+                        },
+                        tooltip: { // Keep other tooltip options if needed
+                            mode: 'index',
+                            intersect: false,
+                            callbacks: { // Combine with default title callback
+                                title: defaultTooltipCallback.plugins.tooltip.callbacks.title,
+                                label: function(context) {
+                                    let label = context.dataset.label || '';
+                                    if (label) {
+                                        label += ': ';
+                                    }
+                                    if (context.parsed.x !== null) {
+                                        label += context.parsed.x + '%';
+                                    }
+                                    return label;
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+        };
+        
+        const createCompetitorSpecializationChart = () => {
+            const ctx = document.getElementById('competitorSpecializationChart').getContext('2d');
+            const rawLabels = ['MineraleViVo', 'Lo Scarabeo', 'Lux-Nova.it', 'Grandi Retailer (es. Macrolibrarsi)', 'Venditori Etsy (Artigianali)'];
+
+            new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: rawLabels.map(label => wrapLabel(label, 16)),
+                    datasets: [
+                        {
+                            label: 'Specializzazione Cristalli',
+                            data: [9, 1, 7, 4, 6],
+                            backgroundColor: energeticPalette.blue,
+                            borderColor: 'rgba(17, 138, 178, 0.5)',
+                            borderWidth: 1
+                        },
+                        {
+                            label: 'Specializzazione Tarocchi',
+                            data: [1, 9, 7, 6, 5],
+                            backgroundColor: energeticPalette.green,
+                            borderColor: 'rgba(6, 214, 160, 0.5)',
+                            borderWidth: 1
+                        }
+                    ]
+                },
+                options: {
+                    indexAxis: 'y',
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        x: {
+                            beginAtZero: true,
+                            max: 10,
+                            ticks: { color: energeticPalette.darkBlue },
+                            grid: { color: 'rgba(7, 59, 76, 0.1)' }
+                        },
+                        y: {
+                            ticks: { color: energeticPalette.darkBlue, font: { size: 10 } },
+                            grid: { display: false }
+                        }
+                    },
+                    ...defaultTooltipCallback
+                }
+            });
+        };
+
+        createMarketGrowthChart();
+        createEuropeMarketShareChart();
+        createPersonasRadarChart();
+        createGenerationalInterestsChart();
+        createCompetitorSpecializationChart();
+    });
+</script>
+</body>
+</html>
+<!-- End of HTML Document -->
+<!-- This HTML document is designed to be a self-contained infographic about the Italian spiritual market, using Tailwind CSS for styling and Chart.js for data visualization. The code includes sections for market size, macro trends, consumer insights, niche trends, and competitive landscape, with responsive design features and a cohesive color palette. -->
